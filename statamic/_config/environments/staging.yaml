@@ -4,5 +4,5 @@
 #
 ###########################################################################################
 
-_site_root: /metting_summit/statamic/
-_site_url: http://clients.philippe.io/metting_summit/statamic/
+_site_root: /meeting_summit/statamic/
+_site_url: http://clients.philippe.io/meeting_summit/statamic/
