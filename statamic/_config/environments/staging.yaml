@@ -1,0 +1,8 @@
+###########################################################################################
+#
+#  DEV ENVIRONMENT VARIABLES
+#
+###########################################################################################
+
+_site_root: /metting_summit/statamic/
+_site_url: http://clients.philippe.io/metting_summit/statamic/
