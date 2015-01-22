@@ -1,0 +1,276 @@
+/*
+*
+* Main Stylesheet For Visual Style Guide
+*
+**/
+@import url("http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,300italic,400italic,600italic");
+/**
+*
+* Utils
+*
+**/
+/**
+*
+* Global
+*
+**/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, a, span, p {
+  font-size: 18px;
+  color: #333333;
+  font-family: "Josefin Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+body {
+  margin: 30px;
+  border: 2px solid #00568e;
+}
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #00568e;
+  margin: 30px;
+  padding: 30px;
+}
+
+.container {
+  min-height: 1px;
+}
+
+.stuck {
+  position: fixed;
+}
+
+ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+ul li {
+  display: inline-block;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+a:hover, a:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.centered h1, .centered h2, .centered h3, .centered h4, .centered span, .centered p, .centered a, .centered img, .centered li {
+  text-align: center;
+}
+
+section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.divider {
+  width: 100%;
+  height: 5px;
+  background-color: #e1261c;
+}
+
+.centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content a {
+  color: #e1261c;
+}
+
+.map-mobile-container {
+  display: block;
+  /* Portrait tablet to landscape and desktop */
+}
+@media (min-width: 992px) {
+  .map-mobile-container {
+    display: none;
+  }
+}
+
+.split-text {
+  display: block;
+  /* Portrait tablet to landscape and desktop */
+}
+@media (min-width: 992px) {
+  .split-text {
+    display: flex;
+  }
+}
+.split-text * {
+  color: #00568e;
+  text-align: center;
+  align-self: center;
+}
+.split-text .left, .split-text .right {
+  border-bottom: 2px solid #e1261c;
+  display: none;
+  /* Portrait tablet to landscape and desktop */
+}
+@media (min-width: 992px) {
+  .split-text .left, .split-text .right {
+    display: block;
+  }
+}
+
+/**
+*
+* Quote
+*
+**/
+.quote .quote-content {
+  margin-bottom: 30px;
+  /* Portrait tablet to landscape and desktop */
+}
+.quote .quote-content setquote {
+  font-weight: 600;
+}
+@media (min-width: 992px) {
+  .quote .quote-content {
+    max-width: 80%;
+    margin-bottom: 50px;
+  }
+  .quote .quote-content:nth-child(even) {
+    margin-left: 20%;
+    text-align: right;
+  }
+  .quote .quote-content:last-of-type {
+    margin-bottom: 35px;
+  }
+}
+
+.page-closer {
+  text-align: center;
+}
+.page-closer h2 {
+  color: #e1261c;
+}
+
+.button {
+  color: #cccccc;
+  margin: 15px 5px;
+  display: inline-block;
+  padding: 30px 60px;
+  background-color: #00568e;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  transition: all .25s;
+  position: relative;
+  overflow: hidden;
+  font-size: 24px;
+}
+.button:hover, .button:focus {
+  background-color: #005c98;
+  color: white;
+}
+
+.button div {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #FFF;
+}
+
+.top {
+  top: -10px;
+}
+
+.bottom {
+  bottom: -10px;
+}
+
+.left {
+  left: -10px;
+}
+
+.right {
+  right: -10px;
+}
+
+.video {
+  background-color: #cccccc;
+  position: relative;
+  padding: 0;
+  margin: 15px 0;
+}
+.video:hover, .video:focus {
+  cursor: pointer;
+}
+.video h2 {
+  z-index: 2;
+}
+
+.video video {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+.video .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  transition: all 0.5s;
+}
+.video .overlay.mask {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#controls h1 {
+  color: white;
+}
+
+#vidpause {
+  height: 100%;
+  width: 100%;
+}
+
+#square {
+  height: 100px;
+  width: 100px;
+  z-index: 2;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*# sourceMappingURL=main.css.map */

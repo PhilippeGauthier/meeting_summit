@@ -1,0 +1,19 @@
+.split-text {
+	
+	display: block;
+	@include breakpoint(medium) {
+		display: flex;
+	}
+	* {
+		color: $navy-blue;
+		text-align: center;
+		align-self: center;
+	}
+	.left, .right {
+		border-bottom: 2px solid $red;
+		display: none;
+	  @include breakpoint(medium) {
+	    display: block;
+	  }
+	}
+}

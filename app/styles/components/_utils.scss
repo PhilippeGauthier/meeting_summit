@@ -1,0 +1,60 @@
+/**
+*
+* Utils
+*
+**/
+
+
+// PG Variables
+$navy-blue          :#00568e;
+$red                :#e1261c;
+$lighter-beige      :#ebe9e2;
+$base-font-color    :#333333;
+$light-font-color   :#58595b;
+$light-gray         :#cccccc;
+$lighter-gray       :#f3f3f3;
+$inactive-gray      :#777777;
+$dark-gray        :#4e4f54;
+
+
+
+$base-font-size: 18px;
+$base-line-height: 27px;
+$rhythm-unit: 'rem';
+$base-font-family: "Josefin Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$headline-font: "adelle", Georgia,Cambria,"Times New Roman",Times,serif;
+$subHeadline-font: "hurme-bold",Georgia,Cambria,"Times New Roman",Times,serif;
+$fontSmall: 13px !default;
+$fontBase: 16px  !default;
+$fontMedium: 20px !default;
+$fontLarge: 26px !default;
+$fontXLarge: 36px !default;
+$fontXXLarge: 80px !default;
+$fontHuge: 100px !default;
+
+$small-screen-width: 768px;
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+@mixin breakpoint($media) {
+    @if $media == small {
+        /* Landscape phone to portrait tablet */
+        @media (min-width: 767px) {@content; }
+    }
+    @else if $media == medium {
+        /* Portrait tablet to landscape and desktop */
+        @media (min-width: 992px) { @content; }
+    }
+    @else  if $media== large {
+        /* Large desktop */
+        @media (min-width: 1200px) { @content; }
+    }
+}
+
+
+

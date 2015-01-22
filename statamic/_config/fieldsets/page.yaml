@@ -1,0 +1,95 @@
+title: Standard Page
+
+fields:
+
+  main_logo:
+    type: file
+    allowed: [png, jpg, gif]
+    destination: assets/img/
+
+  content_blocks:
+    type: replicator
+    instructions: |
+      Replicate a new set for each piece of content you need.
+
+    sets:
+
+      split_blue:
+        display: Split Text
+        fields:
+          my_grid:
+            type: grid
+            fields:
+              text:
+                type: text
+                display: Line of Text
+
+      video_set:
+        display: Looping Video
+        instructions: Upload both .webm and .mp4
+        fields:
+          poster:
+            type: file
+            destination: assets/img/
+          webm:
+            type: file
+            destination: assets/video/
+            allowed: [webm]
+          mp4:
+            type: file
+            destination: assets/video/
+            allowed: [mp4]
+          caption:
+            type: textarea
+            height: 40
+            instructions: Video Overlay Message
+
+      content_set:
+        display: Content
+        instructions: A basic block of text
+        fields:
+          text:
+            display: Text
+            type: markitup
+
+      quote_set:
+        display: Quote
+        instructions: A lovely pullquote
+        fields:
+          my_grid:
+            type: grid
+            fields:
+              quote:
+                type: redactor
+                height: 40
+                width: 60%
+                instructions: What was said?
+              cite:
+                type: redactor
+                height: 40
+                instructions: Who said it?
+
+      image_set:
+        display: Image
+        instructions: Showcase your adventures in a gallery
+        fields:
+          photo:
+            type: file
+            allowed: [png, jpg, gif]
+            destination: assets/img/
+          caption:
+            type: text
+            instructions: Describe the photo
+
+      divider:
+        display: Divider
+        instructions: Add A Horizontal Red Divider
+        fields:
+          photo:
+            type: hidden
+            default: special
+
+
+
+
+

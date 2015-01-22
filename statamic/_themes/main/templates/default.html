@@ -1,0 +1,127 @@
+<div class="container">
+
+<!-- {{ content }} -->
+
+    <section class="centered">
+      <img src="{{ path src="{{ main_logo }}" }}"/>
+    </section>
+
+{{ content_blocks }}
+
+  {{ if type == "split_blue" }}
+
+  <section class="split-text">
+    <div class="left col-md-3"></div>
+    <div class="content col-md-6">
+    {{ my_grid }}
+          <p>{{ text }}</p>
+      {{ /my_grid }}
+    </div>
+    <div class="right col-md-3"></div>
+  </section>
+
+  {{ elseif type == "video_set" }}
+    
+    <section class="video">
+    
+    <video loop poster="{{ path src="{{ poster }}" }}" id="bgvid">
+      <source src="{{ path src="{{ webm }}" }}" type="video/webm">
+      <source src="{{ path src="{{ mp4 }}" }}" type="video/mp4">
+    </video>
+
+    <div class="overlay mask" id="vidpause">
+
+    <div id="controls">
+      <h1 class="col-md-8 col-md-offset-2">{{ caption }}</h1>
+      <div id="square"></div>
+    </div>
+    
+     <!--  <div class="controls"> -->
+        <!-- <div class="video-button "> -->
+          <!-- <button id="vidpause">Pause</button> -->
+          <!-- <div id="vidpause">Pause</div> -->
+        <!-- </div> -->
+        
+
+      <!-- </div> -->
+    </div>
+    </section>
+
+  {{ elseif type == "content_set" }}
+
+    <section class="content">
+      {{ text|markdown }}
+    </section>
+
+  {{ elseif type == "quote_set" }}
+    
+  <section class="quote">
+    {{ my_grid }}
+      <div class="quote-content">
+        <setquote>{{ quote }}</setquote>
+        <p>&mdash; {{ cite }}</p>
+      </div>
+    {{ /my_grid }}
+  </section>
+
+  {{ elseif type == "image_set" }}
+
+    <section class="image">
+      <img src="{{ path src="{{ photo }}" }}" alt="{{ caption }}" />
+      <figcaption>{{ caption }}</figcaption>
+    </section>
+
+  {{ elseif type == "divider" }}
+
+    <div class="divider"></div>
+
+  {{ endif }}
+
+{{ /content_blocks }}
+
+<section class="page-closer">
+  <h2>For more information, please indicate your role in the hospitality industry: </h2>
+  <a href="#" class="button">
+    <div class="top left"></div>
+    <div class="top right"></div>
+    <div class="bottom left"></div>
+    <div class="bottom right"></div>
+    I am a supplier
+  </a>
+  <a href="#" class="button">
+    <div class="top left"></div>
+    <div class="top right"></div>
+    <div class="bottom left"></div>
+    <div class="bottom right"></div>
+    I am a planner
+  </a>
+</section>
+
+<!--   {{ entries:listing folder="blog" limit="10" }}
+   <div class="block entry">
+      <header>
+        <h2 class="entry-title"><a href="{{ url }}">{{ title }}</a></h2>
+        <p class="entry-date"> {{ datestamp format="F jS, Y" }}</p>
+      </header>
+  
+      {{ content }}
+  
+      {{ if categories }}
+      <p class="entry-meta"> Filed under {{ categories_url_list }}.</p>
+      {{ endif }}
+  
+    </div>
+  {{ /entries:listing }}
+  
+  {{ entries:pagination folder="blog" limit="10"}}
+  <div class="pagination">
+    {{ if previous_page }}
+      <a href="{{ previous_page }}">Previous Page</a>
+    {{ endif }}
+    {{ if next_page }}
+      <a href="{{ next_page }}">Next Page</a>
+    {{ endif }}
+  </div>
+  {{ /entries:pagination }} -->
+
+</div>
