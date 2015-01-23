@@ -59,7 +59,7 @@ formatting:
 minHeight: 150
 
 # Turn on/off paragraph formatting
-paragraphize: false
+paragraphize: true
 
 # Turn on/off keypress shortcuts
 shortcuts: true

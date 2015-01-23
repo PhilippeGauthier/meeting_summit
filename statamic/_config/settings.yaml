@@ -179,6 +179,7 @@ _admin_nav:
   help:      true
   view_site: true
   logout:    true
+  globals: true
 
 # When you log in, where would you like to start?
 _admin_start_page: pages

@@ -1,23 +1,25 @@
-<div class="container">
 
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+    <div class="row">
 <!-- {{ content }} -->
 
-    <section class="centered">
-      <img src="{{ path src="{{ main_logo }}" }}"/>
-    </section>
+<section class="centered">
+  <img src="{{_site_root}}{{globals:main_logo}}">
+</section>
 
 {{ content_blocks }}
 
   {{ if type == "split_blue" }}
 
   <section class="split-text">
-    <div class="left col-md-3"></div>
-    <div class="content col-md-6">
+    <div class="left col-md-2"></div>
+    <div class="content col-md-8">
     {{ my_grid }}
           <p>{{ text }}</p>
       {{ /my_grid }}
     </div>
-    <div class="right col-md-3"></div>
+    <div class="right col-md-2"></div>
   </section>
 
   {{ elseif type == "video_set" }}
@@ -80,48 +82,30 @@
 {{ /content_blocks }}
 
 <section class="page-closer">
-  <h2>For more information, please indicate your role in the hospitality industry: </h2>
-  <a href="#" class="button">
-    <div class="top left"></div>
-    <div class="top right"></div>
-    <div class="bottom left"></div>
-    <div class="bottom right"></div>
-    I am a supplier
-  </a>
-  <a href="#" class="button">
-    <div class="top left"></div>
-    <div class="top right"></div>
-    <div class="bottom left"></div>
-    <div class="bottom right"></div>
-    I am a planner
-  </a>
+  <h3>For more information, please indicate your role in the hospitality industry: </h3>
+    {{ entries:listing folder="suppliers" limit="1" }}
+        <a href="{{ url }}" class="button">
+          <div class="top left"></div>
+          <div class="top right"></div>
+          <div class="bottom left"></div>
+          <div class="bottom right"></div>
+          I am a supplier
+        </a>
+    {{ /entries:listing }}
+
+    {{ entries:listing folder="planners" limit="1" }}
+        <a href="{{ url }}" class="button">
+          <div class="top left"></div>
+          <div class="top right"></div>
+          <div class="bottom left"></div>
+          <div class="bottom right"></div>
+          I am a planner
+        </a>
+    {{ /entries:listing }}
+
 </section>
 
-<!--   {{ entries:listing folder="blog" limit="10" }}
-   <div class="block entry">
-      <header>
-        <h2 class="entry-title"><a href="{{ url }}">{{ title }}</a></h2>
-        <p class="entry-date"> {{ datestamp format="F jS, Y" }}</p>
-      </header>
-  
-      {{ content }}
-  
-      {{ if categories }}
-      <p class="entry-meta"> Filed under {{ categories_url_list }}.</p>
-      {{ endif }}
-  
+      </div>
     </div>
-  {{ /entries:listing }}
-  
-  {{ entries:pagination folder="blog" limit="10"}}
-  <div class="pagination">
-    {{ if previous_page }}
-      <a href="{{ previous_page }}">Previous Page</a>
-    {{ endif }}
-    {{ if next_page }}
-      <a href="{{ next_page }}">Next Page</a>
-    {{ endif }}
   </div>
-  {{ /entries:pagination }} -->
 
-</div>

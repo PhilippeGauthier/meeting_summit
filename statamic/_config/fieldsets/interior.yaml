@@ -1,0 +1,101 @@
+title: Standard Page
+
+fields:
+
+  content:
+    hide: true
+
+  content_blocks:
+    type: replicator
+    instructions: |
+      Replicate a new set for each piece of content you need.
+
+    sets:
+
+      image_header_set:
+        display: Header Image
+        instructions: Showcase your adventures in a gallery
+        fields:
+          photo:
+            type: file
+            allowed: [png, jpg, gif]
+            destination: assets/img/
+          caption:
+            type: text
+            instructions: Describe the photo
+
+      content_set:
+        display: Content
+        instructions: A basic block of text
+        fields:
+          header:
+            type: text
+            display: Header (optional)
+          info:
+            display: Text
+            type: redactor
+
+      agenda_set:
+        display: Agenda Content
+        instructions: Create two-column agenda items here
+        fields:
+          header:
+            type: text
+            display: Agenda Title
+          my_grid:
+            type: grid
+            fields:
+              column_1:
+                type: text
+                width: 30%
+                instructions: Time
+              column_2:
+                type: text
+                instructions: Details
+
+      image_set:
+        display: Grid of Images (Sponsors)
+        instructions: Images will be placed left to right in three columns
+        fields:
+          my_grid:
+            type: grid
+            fields:
+              image:
+                type: file
+                allowed: [png, jpg, gif]
+                destination: assets/img/
+              caption:
+                type: text
+                instructions: Add a description for accessibility
+
+
+      quote_set:
+        display: Quote
+        instructions: A lovely pullquote
+        fields:
+          my_grid:
+            type: grid
+            fields:
+              quote:
+                type: redactor
+                height: 40
+                width: 60%
+                instructions: What was said?
+              cite:
+                type: redactor
+                height: 40
+                instructions: Who said it?
+
+
+      divider:
+        display: Divider
+        instructions: Add A Horizontal Red Divider
+        fields:
+          photo:
+            type: hidden
+            default: special
+
+
+
+
+

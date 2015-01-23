@@ -2,11 +2,6 @@ title: Standard Page
 
 fields:
 
-  main_logo:
-    type: file
-    allowed: [png, jpg, gif]
-    destination: assets/img/
-
   content_blocks:
     type: replicator
     instructions: |

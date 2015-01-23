@@ -1,0 +1,17 @@
+hide: true
+
+fields:
+
+  slug:
+    hide: yes
+  content:
+    type: hidden
+  main_logo:
+    type: file
+    allowed: [png, jpg, gif]
+    destination: assets/img/
+  test:
+    type: text
+    display: test
+
+  # add your fields here...

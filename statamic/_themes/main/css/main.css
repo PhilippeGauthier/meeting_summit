@@ -19,23 +19,24 @@
   padding: 0;
 }
 
-html, body, a, span, p {
-  font-size: 18px;
-  color: #333333;
-  font-family: "Josefin Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+html, body {
+  background-color: #ececec;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-  margin: 30px;
-  border: 2px solid #00568e;
+  padding: 30px;
+  min-height: 100%;
+  display: flex;
+  align-items: stretch;
 }
 
 .body-wrapper {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   border: 2px solid #00568e;
-  margin: 30px;
-  padding: 30px;
 }
 
 .container {
@@ -52,11 +53,7 @@ ul {
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
   -webkit-padding-start: 0;
-}
-ul li {
-  display: inline-block;
-  font-weight: 300;
-  line-height: 24px;
+  margin-left: 15px;
 }
 
 a {
@@ -70,6 +67,7 @@ a:hover, a:focus {
 
 img {
   max-width: 100%;
+  margin-bottom: 24px;
 }
 
 .centered h1, .centered h2, .centered h3, .centered h4, .centered span, .centered p, .centered a, .centered img, .centered li {
@@ -106,6 +104,76 @@ section {
   }
 }
 
+.navbar {
+  border-top: 2px solid #00568e;
+  border-bottom: 2px solid #00568e;
+  border-radius: 0;
+}
+
+.navbar-collapse {
+  /* Landscape phone to portrait tablet */
+}
+@media (min-width: 767px) {
+  .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.nav.navbar-nav {
+  display: flex;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  /* Landscape phone to portrait tablet */
+}
+.nav.navbar-nav li {
+  margin-bottom: 0;
+}
+.nav.navbar-nav a {
+  margin-bottom: 0;
+  color: #00568e;
+  padding: 30px;
+  transition: all .15s;
+}
+.nav.navbar-nav a:hover, .nav.navbar-nav a:focus {
+  color: #e1261c;
+}
+.nav.navbar-nav a.on {
+  color: #e1261c;
+}
+@media (min-width: 767px) {
+  .nav.navbar-nav {
+    flex-flow: row nowrap;
+  }
+}
+.nav.navbar-nav a {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before {
+  display: table;
+  content: none;
+}
+
 .split-text {
   display: block;
   /* Portrait tablet to landscape and desktop */
@@ -119,6 +187,11 @@ section {
   color: #00568e;
   text-align: center;
   align-self: center;
+}
+.split-text p {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 0;
 }
 .split-text .left, .split-text .right {
   border-bottom: 2px solid #e1261c;
@@ -155,6 +228,87 @@ section {
   .quote .quote-content:last-of-type {
     margin-bottom: 35px;
   }
+}
+
+/**
+*
+* Typography
+*
+**/
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+a, span, p, li, setquote {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  color: #58595b;
+  font-family: "Josefin Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+h1, h2, h3, h4 {
+  color: #00568e;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.left {
+  text-align: center;
+  /* Landscape phone to portrait tablet */
+}
+@media (min-width: 767px) {
+  .left {
+    text-align: left;
+  }
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 100;
+  /* Landscape phone to portrait tablet */
+}
+@media (min-width: 767px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  /* Landscape phone to portrait tablet */
+}
+@media (min-width: 767px) {
+  h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  /* Landscape phone to portrait tablet */
+}
+@media (min-width: 767px) {
+  h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.content.agenda p {
+  margin-bottom: 0;
 }
 
 .page-closer {
@@ -199,7 +353,7 @@ section {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background-color: #FFF;
+  background-color: #ececec;
 }
 
 .top {
