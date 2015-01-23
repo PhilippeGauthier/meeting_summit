@@ -30,13 +30,7 @@ html {
 body {
   padding: 30px;
   min-height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
 }
 
@@ -127,25 +121,12 @@ section {
 }
 
 .nav.navbar-nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   /* Landscape phone to portrait tablet */
 }
@@ -156,7 +137,6 @@ section {
   margin-bottom: 0;
   color: #00568e;
   padding: 30px;
-  -webkit-transition: all .15s;
   transition: all .15s;
 }
 .nav.navbar-nav a:hover, .nav.navbar-nav a:focus {
@@ -167,8 +147,6 @@ section {
 }
 @media (min-width: 767px) {
   .nav.navbar-nav {
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
   }
 }
@@ -188,17 +166,12 @@ section {
 }
 @media (min-width: 992px) {
   .split-text {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 }
 .split-text * {
   color: #00568e;
   text-align: center;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
 }
 .split-text p {
@@ -350,7 +323,6 @@ h4 {
   -ms-user-select: none;
   user-select: none;
   background-image: none;
-  -webkit-transition: all .25s;
   transition: all .25s;
   position: relative;
   overflow: hidden;
@@ -412,28 +384,12 @@ h4 {
   left: 0;
   right: 0;
   z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   text-align: center;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 .video .overlay.mask {
@@ -456,3 +412,5 @@ h4 {
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+/*# sourceMappingURL=main.css.map */

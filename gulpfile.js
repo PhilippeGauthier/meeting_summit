@@ -62,7 +62,7 @@ gulp.task('styles:copy_dev', function() {
 });
 
 gulp.task('styles:copy_live', function() {
-  return gulp.src(['.tmp/styles/main.css'])
+  return gulp.src(['.tmp/styles/prefix/main.css'])
     .pipe(gulp.dest('statamic/_themes/main/css'))
     .pipe($.size({title: 'copy'}));
 });

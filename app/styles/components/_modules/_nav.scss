@@ -15,25 +15,10 @@
 .nav.navbar-nav {
 	display: flex;
 	width: 100%;
-		display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-box-align: start;
-    -moz-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: flex-start;
 	flex-flow: column nowrap;
 	li {
 		margin-bottom: 0;
