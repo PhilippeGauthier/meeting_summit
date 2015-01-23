@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{{ _site_root }}">Home</a></li>
-        {{ nav from="/planners" folders_only="false" }}
+        {{ nav from="/planners" max_depth="4" folders_only="false" }}
         <li>
           <a href="{{ url }}"{{ if is_current || is_parent }} class="on"{{ endif }}>{{ title|smartypants|widont }}</a>
         </li>
@@ -27,8 +27,8 @@
       </ul>
       </div>
       </div>
-    </div>
-  </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
 
@@ -36,6 +36,12 @@
   <div class="container">
     <div class="col-md-10 col-md-offset-1">
     <div class="row">
+
+<!-- {{ content }} -->
+
+
+
+
 
 
 {{ content_blocks }}
@@ -78,19 +84,19 @@
       <div class="row">
         <div class="col-md-10">
           {{ if header }}<h3>{{ header }}</h3>{{ endif }}
-          {{ info|markdown }}
+          {{ info }}
         </div>
       </div>
     </section>
 
   {{ elseif type == "agenda_set" }}
 
-    <section class="content">
+    <section class="content agenda">
       <h3>{{ header }}</h3>
       {{ my_grid }}
       <div class="row">
-        <div class="col-md-3">{{ column_1 }}</div>
-        <div class="col-md-7">{{ column_2 }}</div>
+        <div class="col-md-3"><p>{{ column_1 }}</p></div>
+        <div class="col-md-7"><p>{{ column_2 }}</p></div>
       </div>
       {{ /my_grid }}
     </section>
