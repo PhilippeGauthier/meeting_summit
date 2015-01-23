@@ -2,6 +2,10 @@ title: Standard Page
 
 fields:
 
+  content:
+    type: redactor
+    hide: true
+
   content_blocks:
     type: replicator
     instructions: |

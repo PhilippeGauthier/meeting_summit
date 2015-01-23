@@ -43,6 +43,7 @@ statamic/_cache
 statamic/_cache/**/*
 statamic/_content
 statamic/_content/**/*
+statamic/_config/users
 statamic/_logs
 statamic/_logs/**/*
 statamic/assets
