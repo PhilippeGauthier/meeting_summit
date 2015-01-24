@@ -6,11 +6,11 @@
 }
 
 .button {
-		color: $light-gray;
+		color: $navy-blue;
     margin: 15px 5px;
     display: inline-block;
     padding: 30px 60px;
-   	background-color: $navy-blue;
+   	background-color: #c0c3c5;
 		font-weight: 400;
 		line-height: 1.42857143;
 		text-align: center;
@@ -29,7 +29,7 @@
     overflow: hidden;
     font-size: 24px;
 		&:hover, &:focus {
-			background-color: lighten($navy-blue,2%);
+			background-color: $navy-blue;
 			color: white;
 		}
 }
@@ -40,7 +40,7 @@
     width: 20px;
     height: 20px;
     border-radius: 100%;
-    background-color: $background-gray;;
+    background-color: $background-gray;
 }
 
 .top { top: -10px; }

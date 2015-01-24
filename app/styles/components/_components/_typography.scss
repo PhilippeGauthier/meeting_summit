@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
-a, span, p, li, setquote {
+a, p, li, setquote {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
@@ -70,6 +70,7 @@ h3 {
 	@include breakpoint(small) {
 		font-size: 24px;
     margin-bottom: 24px;
+    font-weight: 500;
 		// line-height: 40px	;
 	}
 }

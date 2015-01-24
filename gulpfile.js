@@ -35,6 +35,13 @@ var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var compass = require('gulp-compass');
 
+gulp.task('copy', function () {
+  return gulp.src(['.tmp/styles/prefix/*.css'], {
+    dot: true
+  }).pipe(gulp.dest('statamic/_themes/main/css'))
+    .pipe($.size({title: 'copy'}));
+});
+
 
 // Lint JavaScript
 gulp.task('jshint', function () {
@@ -55,25 +62,6 @@ gulp.task('images', function () {
 });
 
 
-gulp.task('styles:copy_dev', function() {
-  return gulp.src(['.tmp/styles/main.css'])
-    .pipe(gulp.dest('statamic/_themes/main/css'))
-    .pipe($.size({title: 'copy'}));
-});
-
-gulp.task('styles:copy_live', function() {
-  return gulp.src(['.tmp/styles/prefix/main.css'])
-    .pipe(gulp.dest('statamic/_themes/main/css'))
-    .pipe($.size({title: 'copy'}));
-});
-
-// Automatically Prefix CSS
-gulp.task('styles:css_prefix', function () {
-  return gulp.src('.tmp/styles/*.css')
-    .pipe($.autoprefixer('last 2 version'))
-    .pipe(gulp.dest('.tmp/styles/prefix'))
-    .pipe($.size({title: 'styles:css'}));
-});
 
 // Compile Sass For Style Guide Components (app/styles/components)
 gulp.task('styles:components', function () {
@@ -86,32 +74,23 @@ gulp.task('styles:components', function () {
     .on('error', function (err) {
       console.log(err);
     })
-    // .pipe($.autoprefixer('last 2 version'))
-    // .pipe(gulp.dest('statamic/_themes/main/css'))
-    .pipe(gulp.dest('.tmp/styles'))
+    .pipe($.autoprefixer('last 2 version'))
+    .pipe(gulp.dest('statamic/_themes/main/css'))
     .pipe($.size({title: 'styles:components'}));
 });
 
-// Compile Sass For Style Guide Components (app/styles/components)
-gulp.task('styles:dev', function () {
-  return gulp.src('app/styles/components/main.scss')
-    .pipe($.rubySass({
-      style: 'expanded',
-      precision: 10,
-      loadPath: ['app/styles/components']
-    }))
-    .on('error', function (err) {
-      console.log(err);
-    })
-    // .pipe($.autoprefixer('last 2 version'))
-    // .pipe(gulp.dest('statamic/_themes/main/css'))
-    .pipe(gulp.dest('statamic/_themes/main/css'))
-    .pipe($.size({title: 'styles:components'}))
-    .pipe(livereload());
+
+// Concatenate and Minify Styles
+gulp.task('minify', function() {
+    return gulp.src('.tmp/styles/prefix/*.css')
+        .pipe(rename({suffix: '.min'}))
+        .pipe(csso())
+        .pipe(gulp.dest('statamic/_themes/main/css'));
+
 });
 
 // Output Final CSS Styles
-gulp.task('styles', ['styles:components', 'styles:css_prefix', 'styles:copy_live', 'minify']);
+gulp.task('styles', ['styles:components', 'minify']);
 
 
 
@@ -142,14 +121,7 @@ gulp.task('scripts_availability-geojson', function() {
     .pipe($.size({title: 'copy'}));
 });
 
-// Concatenate and Minify Styles
-gulp.task('minify', function() {
-    return gulp.src('.tmp/styles/prefix/*.css')
-        .pipe(rename({suffix: '.min'}))
-        .pipe(csso())
-        .pipe(gulp.dest('statamic/_themes/main/css'))
-        .pipe(livereload());
-});
+
 
 // Scan Your HTML For Assets & Optimize Them
 gulp.task('html', function () {
@@ -195,15 +167,6 @@ gulp.task('serve', function() {
   gulp.watch(['statamic/**/*.html'], reload_page);
   gulp.watch(['statamic/**/*.js'], ['scripts','compress', reload_page]);
   gulp.watch(['app/styles/**/*.scss','bower_components/**/*.scss'], ['styles', reload_page]);
-  gulp.watch(['app/scripts/**/*.js'], ['scripts', reload_page]);
-  gulp.watch(['app/images/**/*','statamic/_themes/main/img/**/*'], reload_page);
-});
-
-gulp.task('watch', function() {
-  livereload.listen();
-  gulp.watch(['statamic/**/*.html'], reload_page);
-  gulp.watch(['statamic/**/*.js'], ['scripts','compress', reload_page]);
-  gulp.watch(['app/styles/**/*.scss','bower_components/**/*.scss'], ['styles:dev', reload_page]);
   gulp.watch(['app/scripts/**/*.js'], ['scripts', reload_page]);
   gulp.watch(['app/images/**/*','statamic/_themes/main/img/**/*'], reload_page);
 });

@@ -4,6 +4,10 @@
 *
 **/
 @import url("http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,300italic,400italic,600italic");
+body {
+  color: blue;
+}
+
 /**
 *
 * Utils
@@ -28,10 +32,16 @@ html {
 }
 
 body {
-  padding: 30px;
+  padding: 15px;
   min-height: 100%;
   display: flex;
   align-items: stretch;
+  /* Portrait tablet to landscape and desktop */
+}
+@media (min-width: 992px) {
+  body {
+    padding: 30px;
+  }
 }
 
 .body-wrapper {
@@ -40,6 +50,7 @@ body {
 }
 
 .container {
+  padding: 15px;
   min-height: 1px;
 }
 
@@ -225,7 +236,7 @@ h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
-a, span, p, li, setquote {
+a, p, li, setquote {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
