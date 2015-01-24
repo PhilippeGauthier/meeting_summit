@@ -340,12 +340,13 @@ h4 {
 }
 
 .button {
+  text-transform: uppercase;
   color: #00568e;
+  font-weight: 700;
   margin: 15px 5px;
   display: inline-block;
   padding: 30px 60px;
   background-color: #c0c3c5;
-  font-weight: 400;
   line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
@@ -365,8 +366,8 @@ h4 {
   font-size: 24px;
 }
 .button:hover, .button:focus {
-  background-color: #00568e;
-  color: white;
+  color: #00568e;
+  background-color: #c5c8ca;
 }
 
 .button div {
