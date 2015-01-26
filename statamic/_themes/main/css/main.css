@@ -175,7 +175,7 @@ section {
   -webkit-transition: all .15s;
   transition: all .15s;
 }
-.nav.navbar-nav a:hover, .nav.navbar-nav a:focus {
+.nav.navbar-nav a:hover, .nav.navbar-nav a:focus, .nav.navbar-nav a:active {
   color: #e1261c;
 }
 .nav.navbar-nav a.on {
@@ -203,7 +203,7 @@ section {
   color: #00568e;
   /* Landscape phone to portrait tablet */
 }
-.navbar-brand:hover, .navbar-brand:focus {
+.navbar-brand:hover, .navbar-brand:focus, .navbar-brand:active {
   color: #00568e;
 }
 @media (min-width: 767px) {
