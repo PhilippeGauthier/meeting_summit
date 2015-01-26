@@ -244,13 +244,13 @@ section {
   font-weight: 300;
   margin-bottom: 0;
 }
-.split-text .left, .split-text .right {
+.split-text .left-line, .split-text .right-line {
   border-bottom: 2px solid #e1261c;
   display: none;
   /* Portrait tablet to landscape and desktop */
 }
 @media (min-width: 992px) {
-  .split-text .left, .split-text .right {
+  .split-text .left-line, .split-text .right-line {
     display: block;
   }
 }
