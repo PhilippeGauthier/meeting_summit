@@ -350,14 +350,14 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
   /* Landscape phone to portrait tablet */
 }
 @media (min-width: 767px) {
   h3 {
-    font-size: 24px;
     margin-bottom: 24px;
-    font-weight: 500;
   }
 }
 
@@ -366,8 +366,36 @@ h4 {
   line-height: 28px;
 }
 
+.content.agenda {
+  /* Landscape phone to portrait tablet */
+}
 .content.agenda p {
-  margin-bottom: 5px;
+  margin-bottom: 0;
+}
+.content.agenda .col-sm-3 {
+  margin-top: 10px;
+}
+.content.agenda .col-sm-3 p {
+  font-weight: 700;
+}
+.content.agenda .col-sm-7 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e4e4e4;
+}
+@media (min-width: 767px) {
+  .content.agenda p {
+    margin-bottom: 10px;
+  }
+  .content.agenda .col-sm-3 {
+    margin-top: 0;
+  }
+  .content.agenda .col-sm-3 p {
+    font-weight: 400;
+  }
+  .content.agenda .col-sm-7 {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 }
 
 .page-closer {

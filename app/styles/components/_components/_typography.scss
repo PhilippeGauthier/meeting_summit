@@ -64,14 +64,13 @@ h2 {
   	margin-bottom: 30px;
   }
 }
+
 h3 {
-	font-size: 18px;
-	// line-height: 28px;
+	font-size: 24px;
+	font-weight: 500;
+  margin-bottom: 12px;
 	@include breakpoint(small) {
-		font-size: 24px;
     margin-bottom: 24px;
-    font-weight: 500;
-		// line-height: 40px	;
 	}
 }
 
@@ -85,8 +84,34 @@ h4 {
 }
 
 .content.agenda {
-  p {
-    margin-bottom: 5px;
+    p {
+      margin-bottom: 0;
+    }
+    .col-sm-3 {
+      margin-top: 10px;
+      p {
+        font-weight: 700;
+      }
+    }
+  .col-sm-7 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid darken($background-gray,3%);
+  }
+  @include breakpoint(small) {
+    p {
+      margin-bottom: 10px;
+    }
+    .col-sm-3 {
+      margin-top: 0;
+      p {
+        font-weight: 400;
+      }
+    }
+    .col-sm-7 {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
   }
 }
 
