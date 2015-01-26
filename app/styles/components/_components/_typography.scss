@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
-a, p, li, setquote {
+a, p, li, setquote, .cite {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
@@ -69,6 +69,7 @@ h3 {
 	font-size: 24px;
 	font-weight: 500;
   margin-bottom: 12px;
+  font-style: italic;
 	@include breakpoint(small) {
     margin-bottom: 24px;
 	}

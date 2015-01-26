@@ -11,8 +11,12 @@
     setquote {
       font-weight: 600;
     }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
     p {
       margin-left: 0 !important;
+
     }
     @include breakpoint(medium) {
       max-width: 80%;
@@ -30,7 +34,7 @@
 }
 
 .collapse-link {
-  margin: 15px;
+  margin: 15px 0;
   a {
     color: $red;
   }

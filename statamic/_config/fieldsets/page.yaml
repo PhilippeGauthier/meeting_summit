@@ -49,7 +49,7 @@ fields:
         fields:
           text:
             display: Text
-            type: markitup
+            type: redactor
 
       quote_set:
         display: Quote

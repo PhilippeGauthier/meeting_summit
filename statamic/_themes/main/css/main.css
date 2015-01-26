@@ -264,6 +264,9 @@ section {
 .quote .quote-content setquote {
   font-weight: 600;
 }
+.quote .quote-content p:last-of-type {
+  margin-bottom: 0;
+}
 .quote .quote-content p {
   margin-left: 0 !important;
 }
@@ -282,7 +285,7 @@ section {
 }
 
 .collapse-link {
-  margin: 15px;
+  margin: 15px 0;
 }
 .collapse-link a {
   color: #e1261c;
@@ -297,7 +300,7 @@ h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
-a, p, li, setquote {
+a, p, li, setquote, .cite {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
@@ -353,6 +356,7 @@ h3 {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 12px;
+  font-style: italic;
   /* Landscape phone to portrait tablet */
 }
 @media (min-width: 767px) {
@@ -464,7 +468,7 @@ h4 {
 .video {
   position: relative;
   padding: 0;
-  margin: 15px 0;
+  margin: 20px 0;
   display: none;
   /* Landscape phone to portrait tablet */
 }

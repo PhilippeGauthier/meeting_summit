@@ -55,7 +55,7 @@
       {{ my_grid }}
         <div class="quote-content">
           {{ quote }}
-          <p>&mdash; {{ cite }}</p>
+          <span class="cite">&mdash; {{ cite }}</span>
         </div>
       {{ /my_grid }}
     </section>
@@ -72,7 +72,7 @@
       {{ my_grid }}
         <div class="quote-content">
           {{ quote }}
-          <p>&mdash; {{ cite }}</p>
+          <span class="cite">&mdash; {{ cite }}</span>
         </div>
       {{ /my_grid }}
     </section>
@@ -94,7 +94,7 @@
 {{ /content_blocks }}
 
 <section class="page-closer">
-  <h3>For more information, please indicate your role in the hospitality industry: </h3>
+  <h3 style="font-style: normal; margin-top: 24px;">For more information, please indicate your role in the hospitality industry: </h3>
     {{ entries:listing folder="suppliers" limit="1" }}
         <a href="{{ url }}" class="button">
           <div class="top left"></div>
