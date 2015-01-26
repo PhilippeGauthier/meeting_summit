@@ -57,7 +57,10 @@
 
 .navbar-brand {
 	margin-bottom: 0;	
-	color: $red;
+	color: $navy-blue;
+		&:hover, &:focus {
+			color: $navy-blue;
+		}
 	@include breakpoint(small) {
 		display: none;
 	}

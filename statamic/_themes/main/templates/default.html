@@ -5,11 +5,9 @@
 <!-- {{ content }} -->
 
 <section class="centered">
- <div class="container">
-    <div class="col-md-10">
-      <img src="{{_site_root}}{{globals:main_logo}}">
-    </div>
- </div>
+
+    <img src="{{_site_root}}{{globals:main_logo}}">
+
 </section>
 
 {{ content_blocks }}
@@ -42,14 +40,6 @@
       <div id="square"></div>
     </div>
     
-     <!--  <div class="controls"> -->
-        <!-- <div class="video-button "> -->
-          <!-- <button id="vidpause">Pause</button> -->
-          <!-- <div id="vidpause">Pause</div> -->
-        <!-- </div> -->
-        
-
-      <!-- </div> -->
     </div>
     </section>
 
@@ -72,24 +62,19 @@
 
   {{ elseif type == "secondary_quote_set" }}
 
-<div class="collapse-link">
-  <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    View more testimonials...
-    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-  </a>
-</div>
+    <div class="collapse-link">
+      <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        View more testimonials...
+      </a>
+    </div>
 
     <section class="collapse quote" id="collapseExample">
-
-
-    
-        {{ my_grid }}
-          <div class="quote-content">
-            {{ quote }}
-            <p>&mdash; {{ cite }}</p>
-          </div>
-        {{ /my_grid }}
-
+      {{ my_grid }}
+        <div class="quote-content">
+          {{ quote }}
+          <p>&mdash; {{ cite }}</p>
+        </div>
+      {{ /my_grid }}
     </section>
 
 

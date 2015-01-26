@@ -203,8 +203,11 @@ section {
 
 .navbar-brand {
   margin-bottom: 0;
-  color: #e1261c;
+  color: #00568e;
   /* Landscape phone to portrait tablet */
+}
+.navbar-brand:hover, .navbar-brand:focus {
+  color: #00568e;
 }
 @media (min-width: 767px) {
   .navbar-brand {
@@ -367,7 +370,7 @@ h4 {
 }
 
 .content.agenda p {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
 .page-closer {
