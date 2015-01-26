@@ -102,6 +102,12 @@ section {
 .centered {
   margin: 0 auto;
   text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  /* Landscape phone to portrait tablet */
+}
+.centered img {
+  max-width: 80%;
 }
 
 .content a {
@@ -190,6 +196,22 @@ section {
   }
 }
 
+.navbar .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-brand {
+  margin-bottom: 0;
+  color: #e1261c;
+  /* Landscape phone to portrait tablet */
+}
+@media (min-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
 .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before {
   display: table;
   content: none;
@@ -241,6 +263,9 @@ section {
 }
 .quote .quote-content setquote {
   font-weight: 600;
+}
+.quote .quote-content p {
+  margin-left: 0 !important;
 }
 @media (min-width: 992px) {
   .quote .quote-content {
@@ -412,12 +437,19 @@ h4 {
   position: relative;
   padding: 0;
   margin: 15px 0;
+  display: none;
+  /* Landscape phone to portrait tablet */
 }
 .video:hover, .video:focus {
   cursor: pointer;
 }
 .video h2 {
   z-index: 2;
+}
+@media (min-width: 767px) {
+  .video {
+    display: block;
+  }
 }
 
 .video video {

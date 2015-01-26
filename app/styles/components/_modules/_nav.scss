@@ -50,6 +50,19 @@
 	}
 }
 
+.navbar .container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.navbar-brand {
+	margin-bottom: 0;	
+	color: $red;
+	@include breakpoint(small) {
+		display: none;
+	}
+}
+
 .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before,  {
 display: table;
 content: none;

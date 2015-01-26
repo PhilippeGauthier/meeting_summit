@@ -104,6 +104,14 @@ section {
 .centered {
   margin: 0 auto;
   text-align: center;
+  img {
+    max-width: 80%;
+  }
+    padding-top: 0;
+    padding-bottom: 0;
+  @include breakpoint(small) {
+
+  }
 }
 
 .content {

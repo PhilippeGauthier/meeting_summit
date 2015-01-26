@@ -11,6 +11,9 @@
     setquote {
       font-weight: 600;
     }
+    p {
+      margin-left: 0 !important;
+    }
     @include breakpoint(medium) {
       max-width: 80%;
       margin-bottom: 50px;

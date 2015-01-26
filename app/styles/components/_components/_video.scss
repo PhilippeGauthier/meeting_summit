@@ -9,6 +9,10 @@
 	h2 {
 		z-index: 2;
 	}
+	display: none;
+	@include breakpoint(small) {
+		display: block;
+	}
 }
 // .video h2 {
 // 	@include vertical-align;
