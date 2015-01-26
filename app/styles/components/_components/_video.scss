@@ -41,6 +41,7 @@
 
 #controls h1 {
 	color: white;
+	margin-top: 10px;
 }
 
 #vidpause {
@@ -56,8 +57,10 @@
 #square {
 	height: 100px;
 	width: 100px;
+	background-size: contain;
+	margin-bottom: 20px;
+	background-image: url("../../../assets/img/play.png");
 	z-index: 2;
 	margin: 0 auto;
-	background-color:rgba(white, .5);
-	border-radius: 100%;
+
 }

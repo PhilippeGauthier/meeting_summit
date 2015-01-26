@@ -60,12 +60,29 @@ fields:
             fields:
               quote:
                 type: redactor
-                height: 40
+                height: 80
                 width: 60%
                 instructions: What was said?
               cite:
+                type: textarea
+                height: 80
+                instructions: Who said it?
+
+      secondary_quote_set:
+        display: Collapsable Secondary Quotes
+        instructions: A lovely pullquote
+        fields:
+          my_grid:
+            type: grid
+            fields:
+              quote:
                 type: redactor
-                height: 40
+                height: 80
+                width: 60%
+                instructions: What was said?
+              cite:
+                type: textarea
+                height: 80
                 instructions: Who said it?
 
       image_set:

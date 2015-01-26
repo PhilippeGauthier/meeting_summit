@@ -57,14 +57,36 @@
 
   {{ elseif type == "quote_set" }}
     
-  <section class="quote">
-    {{ my_grid }}
-      <div class="quote-content">
-        <setquote>{{ quote }}</setquote>
-        <p>&mdash; {{ cite }}</p>
-      </div>
-    {{ /my_grid }}
-  </section>
+    <section class="quote">
+      {{ my_grid }}
+        <div class="quote-content">
+          {{ quote }}
+          <p>&mdash; {{ cite }}</p>
+        </div>
+      {{ /my_grid }}
+    </section>
+
+  {{ elseif type == "secondary_quote_set" }}
+
+<div class="collapse-link">
+  <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    View more testimonials...
+  </a>
+</div>
+
+    <section class="collapse quote" id="collapseExample">
+
+
+    
+        {{ my_grid }}
+          <div class="quote-content">
+            {{ quote }}
+            <p>&mdash; {{ cite }}</p>
+          </div>
+        {{ /my_grid }}
+
+    </section>
+
 
   {{ elseif type == "image_set" }}
 
