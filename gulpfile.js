@@ -62,7 +62,6 @@ gulp.task('images', function () {
 });
 
 
-
 // Compile Sass For Style Guide Components (app/styles/components)
 gulp.task('styles:components', function () {
   return gulp.src('app/styles/components/main.scss')
@@ -82,7 +81,7 @@ gulp.task('styles:components', function () {
 
 // Concatenate and Minify Styles
 gulp.task('minify', function() {
-    return gulp.src('.tmp/styles/prefix/*.css')
+    return gulp.src('statamic/_themes/main/css/*.css')
         .pipe(rename({suffix: '.min'}))
         .pipe(csso())
         .pipe(gulp.dest('statamic/_themes/main/css'));
@@ -96,17 +95,17 @@ gulp.task('styles', ['styles:components', 'minify']);
 
 // Concatenate Javascript
 gulp.task('scripts', function() {
-  gulp.src(['app/scripts/*.js'])
+  gulp.src(['app/scripts/concatenate/*.js','app/scripts/main.js'])
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('statamic/_themes/main/js/build'))
+    .pipe(gulp.dest('statamic/_themes/main/js'));
 });
 
 // Minify Javascript
+
 gulp.task('compress', function() {
-  gulp.src(['statamic/_themes/main/js/build/*.js'])
-    .pipe(rename({suffix: '.min'}))
+  gulp.src('statamic/_themes/main/js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('statamic/_themes/main/js/'))
+    .pipe(gulp.dest('statamic/_themes/main/js'))
 });
 
 gulp.task('scripts_non_cat', function() {
@@ -165,8 +164,7 @@ gulp.task('clean', del.bind(null, ['.tmp', 'statamic/_themes/main/css/','statami
 gulp.task('serve', function() {
   livereload.listen();
   gulp.watch(['statamic/**/*.html'], reload_page);
-  gulp.watch(['statamic/**/*.js'], ['scripts','compress', reload_page]);
-  gulp.watch(['app/styles/**/*.scss','bower_components/**/*.scss'], ['styles', reload_page]);
+  gulp.watch(['app/styles/**/*.scss','bower_components/**/*.scss'], ['styles:components', reload_page]);
   gulp.watch(['app/scripts/**/*.js'], ['scripts', reload_page]);
   gulp.watch(['app/images/**/*','statamic/_themes/main/img/**/*'], reload_page);
 });

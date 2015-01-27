@@ -1,123 +1,121 @@
 
-  <div class="container">
-    <div class="col-md-10 col-md-offset-1">
+<div class="container">
+  <div class="col-md-10 col-md-offset-1">
     <div class="row">
-<!-- {{ content }} -->
-
-<section class="centered">
-
-    <img src="{{_site_root}}{{globals:main_logo}}">
-
-</section>
-
-{{ content_blocks }}
-
-  {{ if type == "split_blue" }}
-
-  <section class="split-text">
-    <div class="left-line col-md-2"></div>
-    <div class="content col-md-8">
-    {{ my_grid }}
-          <p>{{ text }}</p>
-      {{ /my_grid }}
-    </div>
-    <div class="right-line col-md-2"></div>
-  </section>
-
-  {{ elseif type == "video_set" }}
-    
-    <section class="video">
-    
-    <video loop poster="{{ path src="{{ poster }}" }}" id="bgvid">
-      <source src="{{ path src="{{ webm }}" }}" type="video/webm">
-      <source src="{{ path src="{{ mp4 }}" }}" type="video/mp4">
-    </video>
-
-    <div class="overlay mask" id="vidpause">
-
-    <div id="controls">
-      <h1 class="col-md-8 col-md-offset-2">{{ caption }}</h1>
-      <div id="square"></div>
-    </div>
-    
-    </div>
-    </section>
-
-  {{ elseif type == "content_set" }}
-
-    <section class="content">
-      {{ text|markdown }}
-    </section>
-
-  {{ elseif type == "quote_set" }}
-    
-    <section class="quote">
-      {{ my_grid }}
-        <div class="quote-content">
-          {{ quote }}
-          <span class="cite">&mdash; {{ cite }}</span>
-        </div>
-      {{ /my_grid }}
-    </section>
-
-  {{ elseif type == "secondary_quote_set" }}
-
-    <div class="collapse-link">
-      <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        View more testimonials...
-      </a>
-    </div>
-
-    <section class="collapse quote" id="collapseExample">
-      {{ my_grid }}
-        <div class="quote-content">
-          {{ quote }}
-          <span class="cite">&mdash; {{ cite }}</span>
-        </div>
-      {{ /my_grid }}
-    </section>
 
 
-  {{ elseif type == "image_set" }}
+      <section class="centered">
+        <img src="{{_site_root}}{{globals:main_logo}}">
+      </section>
 
-    <section class="image">
-      <img src="{{ path src="{{ photo }}" }}" alt="{{ caption }}" />
-      <figcaption>{{ caption }}</figcaption>
-    </section>
+      {{ content_blocks }}
 
-  {{ elseif type == "divider" }}
+        {{ if type == "split_blue" }}
 
-    <div class="divider"></div>
+        <section class="split-text">
+          <div class="left-line col-md-2"></div>
+          <div class="content col-md-8">
+          {{ my_grid }}
+                <p>{{ text }}</p>
+            {{ /my_grid }}
+          </div>
+          <div class="right-line col-md-2"></div>
+        </section>
 
-  {{ endif }}
+        {{ elseif type == "video_set" }}
+          
+          <section class="video">
+          
+          <video loop poster="{{ path src="{{ poster }}" }}" id="bgvid">
+            <source src="{{ path src="{{ webm }}" }}" type="video/webm">
+            <source src="{{ path src="{{ mp4 }}" }}" type="video/mp4">
+          </video>
 
-{{ /content_blocks }}
+          <div class="overlay mask" id="vidpause">
 
-<section class="page-closer">
-  <h3 style="font-style: normal; margin-top: 24px;">For more information, please indicate your role in the hospitality industry: </h3>
-    {{ entries:listing folder="suppliers" limit="1" }}
-        <a href="{{ url }}" class="button">
-          <div class="top left"></div>
-          <div class="top right"></div>
-          <div class="bottom left"></div>
-          <div class="bottom right"></div>
-          Supplier
-        </a>
-    {{ /entries:listing }}
+          <div id="controls">
+            <h1 class="col-md-8 col-md-offset-2">{{ caption }}</h1>
+            <div id="square"></div>
+          </div>
+          
+          </div>
+          </section>
 
-    {{ entries:listing folder="planners" limit="1" }}
-        <a href="{{ url }}" class="button">
-          <div class="top left"></div>
-          <div class="top right"></div>
-          <div class="bottom left"></div>
-          <div class="bottom right"></div>
-          Planner
-        </a>
-    {{ /entries:listing }}
+        {{ elseif type == "content_set" }}
 
-</section>
+          <section class="content">
+            {{ text }}
+          </section>
 
-      </div>
+        {{ elseif type == "quote_set" }}
+          
+          <section class="quote">
+            {{ my_grid }}
+              <div class="quote-content">
+                {{ quote }}
+                <span class="cite">&mdash; {{ cite }}</span>
+              </div>
+            {{ /my_grid }}
+          </section>
+
+        {{ elseif type == "secondary_quote_set" }}
+
+          <div class="collapse-link">
+            <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              View more testimonials...
+            </a>
+          </div>
+
+          <section class="collapse quote" id="collapseExample">
+            {{ my_grid }}
+              <div class="quote-content">
+                {{ quote }}
+                <span class="cite">&mdash; {{ cite }}</span>
+              </div>
+            {{ /my_grid }}
+          </section>
+
+
+        {{ elseif type == "image_set" }}
+
+          <section class="image">
+            <img src="{{ path src="{{ photo }}" }}" alt="{{ caption }}" />
+            <figcaption>{{ caption }}</figcaption>
+          </section>
+
+        {{ elseif type == "divider" }}
+
+          <div class="divider"></div>
+
+        {{ endif }}
+
+      {{ /content_blocks }}
+
+      <section class="page-closer">
+      <h3 style="font-style: normal; margin-top: 24px;">For more information, please indicate your role in the hospitality industry: </h3>
+        {{ entries:listing folder="suppliers" limit="1" }}
+            <a href="{{ url }}" class="button">
+              <div class="top left"></div>
+              <div class="top right"></div>
+              <div class="bottom left"></div>
+              <div class="bottom right"></div>
+              Supplier
+            </a>
+        {{ /entries:listing }}
+
+        {{ entries:listing folder="planners" limit="1" }}
+            <a href="{{ url }}" class="button">
+              <div class="top left"></div>
+              <div class="top right"></div>
+              <div class="bottom left"></div>
+              <div class="bottom right"></div>
+              Planner
+            </a>
+        {{ /entries:listing }}
+
+      </section>
+
     </div>
   </div>
+</div>
 
