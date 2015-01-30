@@ -27,7 +27,7 @@ _site_name: Luxury Meeting Summit | The Broadmoor
 _content_root: _content
 
 # Used for permalinks
-_site_url: http://statamic.com
+_site_url: http://meetingssummit.com
 
 # Folder name of your desired theme
 _theme: main
@@ -124,6 +124,7 @@ _environments:
     - 'clients.*.com'
     - 'clients.*.io'
   live:
+    - 'dev.*.com'
     - '*.com'
     - '*.io'
 
